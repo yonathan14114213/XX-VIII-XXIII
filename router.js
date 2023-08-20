@@ -1,9 +1,10 @@
 const express = require('express');
 const dataController = require('./controlers/dataController');
 const router = express.Router();
-router.get('/allData', async (req,res)=>{
+
+router.get('/allData', (req,res)=>{
     console.log('router 2')
-    await res.send(dataController.getData());
+    res.send(dataController.getData());
 });
 console.log('router 1');
 

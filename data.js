@@ -22,8 +22,6 @@ const data = [{
         rate:8,
         count:87
     }
-}]
+}];
 
-function getData() {
-    return data;
-}
+module.exports = {data};
