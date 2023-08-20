@@ -7,13 +7,13 @@ router.get('/allData', async (req,res)=>{
 });
 console.log('router 1');
 
-/*
+
 router.get('/:id',(req, res)=>{
     res.send(dataByIdController.getData());
 });
 
 router.post('/',(req, res)=>{
-    res.send(createController.setData());
+    res.send(createNewProductController.setData());
 });
-*/
+
 module.exports = router;

@@ -1,8 +1,8 @@
 const dataService = require('../services/dataService');
-let data
+
 const getData = async(req, res) => {
     console.log('controller 2');
-    await data = dataService.getData()
+    const data = await dataService.getData()
     await res.json(data)
 };
 console.log('controller 1');
