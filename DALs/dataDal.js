@@ -1,8 +1,14 @@
-const { data } = require('../data');
-const getData = async (req, res) => {
-    console.log('dal 2');
-    const ans = await Promise.resolve(data);
-    return ans;
+const json = require('jsonfile');
+
+
+const  getData = async () => {
+    const data = await getJson('./data.json');
+    return data;
 };
-console.log('dal 1');
+
+
+async function getJson (jsonfile){
+    const data = await json.readFile(jsonfile)
+    return data
+}
 module.exports = {getData}

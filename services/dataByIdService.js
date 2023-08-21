@@ -1,6 +1,6 @@
 const dataDal= require('../DALs/dataByIdDal');
-const getData = (req, res) => {
-const data = dataDal.getData();
+const getData = async (id) => {
+const data = await dataDal.getData(id);
 return data;
 };
 module.exports = {getData}

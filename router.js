@@ -2,19 +2,17 @@ const express = require('express');
 const dataController = require('./controlers/dataController');
 const router = express.Router();
 
-router.get('/allData', (req,res)=>{
-    console.log('router 2')
-    res.send(dataController.getData());
-});
-console.log('router 1');
+router.get('/allData',dataController.getData);
+
 
 
 router.get('/:id',(req, res)=>{
-    res.send(dataByIdController.getData());
+    const id = req.params.id
+    res.send(dataByIdController.getData(id));
 });
 
 router.post('/',(req, res)=>{
-    res.send(createNewProductController.setData());
+    res.send(createNewProductCtrl.setData());
 });
 
 module.exports = router;

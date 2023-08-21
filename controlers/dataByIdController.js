@@ -1,6 +1,6 @@
 const dataService = require('../services/dataByIdService');
-const getData = (req, res) => {
-const data = dataService.getData();
-res.json(data);
+const getData = async (id, res) => {
+const data = await dataService.getData(id);
+res.send(res.json(data));
 };
 module.exports = {getData}

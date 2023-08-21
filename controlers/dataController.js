@@ -1,9 +1,11 @@
 const dataService = require('../services/dataService');
 
-const getData = async(req, res) => {
-    console.log('controller 2');
-    const data = await dataService.getData()
-    res.json(data)
+const getData =  async (req, res) => {
+    const data =  await dataService.getData();
+    console.log(data);
+    res.send(res.json(data));
+  
 };
-console.log('controller 1');
+console.log("cont " + getData());
+
 module.exports = {getData}

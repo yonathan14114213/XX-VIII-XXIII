@@ -1,8 +1,9 @@
 const dataDal= require('../DALs/dataDal');
+
 const getData = async (req, res) => {
-    console.log('server 2');
     const data = await dataDal.getData();
-    return data;
+    return data
 };
-console.log('server 1');
+console.log("servise " + getData());
+
 module.exports = {getData}
